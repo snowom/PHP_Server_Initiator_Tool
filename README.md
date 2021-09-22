@@ -11,6 +11,15 @@
 </p>
 <br>
 
+## Requirements
+<p>
+  <ul>
+    <li>PHP needs installed for the script to work.</li>
+    <li>This script only works on Windows.</li>
+  </ul>
+</p>
+<br>
+
 ## How to Configure
 
 <p>
