@@ -21,24 +21,28 @@ echo.
 
 ::SET VARIABLES - EDIT THIS WITH YOUR PREFERENCE
 set language="pt-BR"
-set start_path="C:\Users\Thomaz\Desenvolvimento\projetos_PHP"
+set start_path="C:\Users\Thomaz\Desenvolvimento\projetos_PHPa"
 set port=8082
 
 
 if %language% EQU "pt-BR" (
     set lblDirExecute=Diretorio de execucao:
     set lblPort=Porta Usada:
+    set lblInvalidPath=ATENCAO - O caminho especificado na variavel start_path eh invalido ou nao existe.
 ) else (
     if %language% EQU "en" (
         set lblDirExecute=Execution Directory:
         set lblPort=Used Port:
+        set lblInvalidPath=ATTENTION - The path specified in the start_path variable is invalid or does not exist.
     ) else (
         if %language% EQU "es" (
             set lblDirExecute=Directorio de ejecucion:
             set lblPort=Puerto usado:
+            set lblInvalidPath=ATENCION: la ruta especificada en la variable start_path no es valida o no existe.
         ) else (
             set lblDirExecute=Diretorio de execucao:
             set lblPort=Porta Usada:
+            set lblInvalidPath=ATENCAO - O caminho especificado na variavel start_path eh invalido ou nao existe.
         )
     )
 )
@@ -49,10 +53,12 @@ cd %userprofile%
 echo.
 echo.
 if not exist "%start_path%" (
+    echo %lblInvalidPath%
     echo.
-    echo ATENCAO - Diretorio invalido ou inexistente
-    ping -n 4 localhost > nul
-    goto :inicio
+    echo.
+    echo.
+    pause
+    exit
 )
 cd %start_path%
 php -S localhost:%port%
