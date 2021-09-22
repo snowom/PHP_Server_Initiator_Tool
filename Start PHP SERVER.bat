@@ -19,12 +19,32 @@ echo     ***********************************************************************
 echo.
 echo.
 
-::SET VARIABLES
+::SET VARIABLES - EDIT THIS WITH YOUR PREFERENCE
+set language="pt-BR"
 set start_path="C:\Users\Thomaz\Desenvolvimento\projetos_PHP"
 set port=8082
 
-echo Diretorio de execucao: %start_path%
-echo Porta Usada: %port%
+
+if %language% EQU "pt-BR" (
+    set lblDirExecute=Diretorio de execucao:
+    set lblPort=Porta Usada:
+) else (
+    if %language% EQU "en" (
+        set lblDirExecute=Execution Directory:
+        set lblPort=Used Port:
+    ) else (
+        if %language% EQU "es" (
+            set lblDirExecute=Directorio de ejecucion:
+            set lblPort=Puerto usado:
+        ) else (
+            set lblDirExecute=Diretorio de execucao:
+            set lblPort=Porta Usada:
+        )
+    )
+)
+
+echo %lblDirExecute% %start_path%
+echo %lblPort% %port%
 cd %userprofile%
 echo.
 echo.
