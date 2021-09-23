@@ -11,6 +11,10 @@
 </p>
 <br>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thomazf/PHP_Server_Initiator_Tool/main/main.PNG" />
+</p>
+
 ## Requirements
 <p>
   <ul>
