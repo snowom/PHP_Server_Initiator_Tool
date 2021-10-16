@@ -20,8 +20,8 @@ echo.
 echo.
 
 ::SET VARIABLES - EDIT THIS WITH YOUR PREFERENCE
-set language="pt-BR"
-set start_path="C:\Users\Thomaz\Desenvolvimento\projetos_PHPa"
+set language="en"
+set start_path="C:\Users\Thomaz\Desenvolvimento\Site Posso Ler"
 set port=8082
 
 
@@ -52,7 +52,7 @@ echo %lblPort% %port%
 cd %userprofile%
 echo.
 echo.
-if not exist "%start_path%" (
+if not exist %start_path% (
     echo %lblInvalidPath%
     echo.
     echo.
